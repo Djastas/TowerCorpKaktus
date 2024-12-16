@@ -77,6 +77,7 @@ namespace _main.Scripts.UI.Dialog
             text.text = "";
             foreach (var phrase in writeDialog.phrases)
             {
+                text.text = "";
                 onPhraseIndexChanged?.Invoke(writeDialog.phrases.IndexOf(phrase));
                 foreach (var character in phrase.value)
                 {
@@ -112,7 +113,7 @@ namespace _main.Scripts.UI.Dialog
                     yield return new WaitForSeconds(phrase.timeBetweenChar);
                 }
                 yield return new WaitForSeconds(phrase.timeBetweenNextPhrase);
-                text.text = "";
+                
             }
             onEndDialog?.Invoke();
             
