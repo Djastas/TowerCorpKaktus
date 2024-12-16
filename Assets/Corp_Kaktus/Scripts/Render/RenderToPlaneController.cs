@@ -18,7 +18,7 @@ namespace Corp_Kaktus.Scripts.Render
         private void Init()
         {
             Clear();
-            renderTexture = new RenderTexture(Screen.currentResolution.height,Screen.currentResolution.width,16);
+            renderTexture = new RenderTexture(Screen.currentResolution.width,Screen.currentResolution.height,16);
 
             if (mainCamera)
             {
