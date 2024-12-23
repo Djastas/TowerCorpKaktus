@@ -115,9 +115,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 801eb52fca0b48e2baa31331c2b4c8ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerMaxTime: 5
+  playerLostTime: 5
+  playerLostTimer: 0
   player: {fileID: 0}
-  timer: 0
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -132,19 +132,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: StartWalkToPlayer
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: EndWalkToPlayer
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer

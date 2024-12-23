@@ -8,20 +8,22 @@ namespace Corp_Kaktus.Scripts.EnemyAi.States
         
         private static readonly int EndWalkToPlayer = Animator.StringToHash("EndWalkToPlayer");
         
-        private float playerLostTimer;
-        private Transform player;
+        [SerializeField] private float playerLostTimer;
+        [SerializeField] private Transform player;
 
         public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
             Context = animator.GetComponent<EnemyAiController>();
+            player = Context.lastPlayer;
             playerLostTimer = playerLostTime;
             Context.onSeePlayer.AddListener(OnStartSeePlayer);
-            Context.onSeePlayer.AddListener(OnEndSeePlayer);
+            Context.onEndSeePlayer.AddListener(OnEndSeePlayer);
         }
         public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
+            player = null;
             Context.onSeePlayer.RemoveListener(OnStartSeePlayer);
-            Context.onSeePlayer.RemoveListener(OnEndSeePlayer);
+            Context.onEndSeePlayer.RemoveListener(OnEndSeePlayer);
         }
         public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {

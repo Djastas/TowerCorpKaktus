@@ -1,8 +1,10 @@
+using System;
 using System.Collections.Generic;
 using Corp_Kaktus.Scripts.Utils;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 namespace Corp_Kaktus.Scripts.EnemyAi
 {
@@ -10,31 +12,56 @@ namespace Corp_Kaktus.Scripts.EnemyAi
     [RequireComponent(typeof(CheckVisibility))]
     public class EnemyAiController : MonoBehaviour
     {
-        [Header("Draw")] [SerializeField] private List<Transform> drawSpawns;
+        [Header("Draw")] 
+        [SerializeField] private List<Transform> drawSpawns;
         [SerializeField] private GameObject drawPrefab;
+        [SerializeField] private List<CheckVisibility> createdDraws;
 
-        [Header("Navigation")] public NavMeshAgent navigation;
+        [Header("Navigation")]
+        public NavMeshAgent navigation; // todo
         public float targetCollisionThreshold = 1f;
-
-
-        private Animator animator;
+        
+        [Header("Debug")]
         public Transform drawSpawnTemp;
+        
+        private Animator animator;
 
         private void Start()
         {
             animator = GetComponent<Animator>();
 
             var checkVisibilityComponent = GetComponent<CheckVisibility>();
-            checkVisibilityComponent.onStartSeeTransform.AddListener(OnSeePlayer);
-            checkVisibilityComponent.onEndSeeTransform.AddListener(OnEndSeePlayer);
+            SubscribeCheckVisibility(checkVisibilityComponent);
+            
+            foreach (var checkVisibility in createdDraws)
+            {
+                SubscribeCheckVisibility(checkVisibility);
+            }
         }
 
         public void SetRandomDrawPosition() => drawSpawnTemp = drawSpawns[Random.Range(0, drawSpawns.Count)];
         public void CreateDraw()
         {
             Instantiate(drawPrefab, drawSpawnTemp);
+            try
+            {
+                SubscribeCheckVisibility(drawPrefab.GetComponent<CheckVisibility>());
+            }
+            catch (Exception e)
+            {
+                Debug.LogError("CheckVisibility not contains in drawPrefab");
+                Debug.LogError(e);
+                throw;
+            }
+            
             drawSpawns.Remove(drawSpawnTemp);
             Debug.Log("CreateDraw");
+        }
+
+        private void SubscribeCheckVisibility(CheckVisibility checkVisibilityComponent)
+        {
+            checkVisibilityComponent.onStartSeeTransform.AddListener(OnSeePlayer);
+            checkVisibilityComponent.onEndSeeTransform.AddListener(OnEndSeePlayer);
         }
 
 
@@ -43,23 +70,16 @@ namespace Corp_Kaktus.Scripts.EnemyAi
 
         private static readonly int StartWalkToPlayer = Animator.StringToHash("StartWalkToPlayer");
 
+        public Transform lastPlayer;
         private void OnSeePlayer(Transform player)
         {
-            if (onSeePlayer.GetPersistentEventCount() > 0)
-            {
-                onSeePlayer.Invoke(player);
-            }
-            else
-            {
-                animator.SetTrigger(StartWalkToPlayer);
-            }
+            animator.SetTrigger(StartWalkToPlayer);
+            lastPlayer = player;
+            onSeePlayer?.Invoke(player);
         }
         private void OnEndSeePlayer(Transform player)
         {
-            if (onEndSeePlayer.GetPersistentEventCount() > 0)
-            {
-                onEndSeePlayer.Invoke(player);
-            }
+            onEndSeePlayer.Invoke(player);
         }
     }
 }
