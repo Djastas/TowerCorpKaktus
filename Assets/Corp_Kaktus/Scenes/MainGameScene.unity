@@ -5496,6 +5496,12 @@ MonoBehaviour:
   onEndSee:
     m_PersistentCalls:
       m_Calls: []
+  onStartSeeTransform:
+    m_PersistentCalls:
+      m_Calls: []
+  onEndSeeTransform:
+    m_PersistentCalls:
+      m_Calls: []
   debug: 1
 --- !u!4 &280128728
 Transform:
@@ -10485,6 +10491,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onEndSee:
+    m_PersistentCalls:
+      m_Calls: []
+  onStartSeeTransform:
+    m_PersistentCalls:
+      m_Calls: []
+  onEndSeeTransform:
     m_PersistentCalls:
       m_Calls: []
   debug: 1
@@ -20799,6 +20811,12 @@ MonoBehaviour:
   onEndSee:
     m_PersistentCalls:
       m_Calls: []
+  onStartSeeTransform:
+    m_PersistentCalls:
+      m_Calls: []
+  onEndSeeTransform:
+    m_PersistentCalls:
+      m_Calls: []
   debug: 1
 --- !u!1001 &1139997579
 PrefabInstance:
@@ -23208,7 +23226,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1253733685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23216,7 +23234,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253733684}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26d6499a6bd256e47b859377446493a1, type: 3}
   m_Name: 
@@ -23261,7 +23279,7 @@ MonoBehaviour:
         clearFlags: -1
         passFoldout: 0
         m_Version: 0
-        filterFoldout: 1
+        filterFoldout: 0
         rendererFoldout: 1
         renderQueueType: 2
         layerMask:
@@ -24791,6 +24809,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onEndSee:
+    m_PersistentCalls:
+      m_Calls: []
+  onStartSeeTransform:
+    m_PersistentCalls:
+      m_Calls: []
+  onEndSeeTransform:
     m_PersistentCalls:
       m_Calls: []
   debug: 1
@@ -36026,6 +36050,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onEndSee:
+    m_PersistentCalls:
+      m_Calls: []
+  onStartSeeTransform:
+    m_PersistentCalls:
+      m_Calls: []
+  onEndSeeTransform:
     m_PersistentCalls:
       m_Calls: []
   debug: 1

@@ -13,6 +13,9 @@ namespace Corp_Kaktus.Scripts.Utils
         public UnityEvent<Vector3> onStartSee;
         public UnityEvent<Vector3> onEndSee;
         
+        public UnityEvent<Transform> onStartSeeTransform;
+        public UnityEvent<Transform> onEndSeeTransform;
+        
         
         public bool CheckResult {get; private set;}
 
@@ -35,6 +38,7 @@ namespace Corp_Kaktus.Scripts.Utils
             }
 
             (result ? onStartSee : onEndSee)?.Invoke(hit.point);
+            (result ? onStartSeeTransform : onEndSeeTransform)?.Invoke(hit.transform);
             CheckResult = result;
         }
 
