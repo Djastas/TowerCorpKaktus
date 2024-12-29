@@ -20,4 +20,70 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Corp_Kaktus/Scenes/MainGameScene.unity
     guid: a0d6af93c79f37548ac03c1e4f7c2c2f
+  - enabled: 1
+    path: Assets/VST/Assets/scenes/convolution reverb.unity
+    guid: 5d2573e11e35e408cb26ffc7997ede81
+  - enabled: 1
+    path: Assets/VST/Assets/scenes/engine.unity
+    guid: f7ad8f036db0347a38c1c7485a324dd9
+  - enabled: 1
+    path: Assets/VST/Assets/scenes/fire.unity
+    guid: 35e7df92cceaa4b62af7d27ee73cb396
+  - enabled: 1
+    path: Assets/VST/Assets/scenes/glottal.unity
+    guid: 14cd9f6bded2e4609ad3791a42cb7301
+  - enabled: 1
+    path: Assets/VST/Assets/scenes/granulator fractal demo.unity
+    guid: 2d8a90e7b5c644b959c7d2d9e0ac241e
+  - enabled: 1
+    path: Assets/VST/Assets/scenes/granulator live demo.unity
+    guid: 7d662957502704f7e82318d05c20df05
+  - enabled: 1
+    path: Assets/VST/Assets/scenes/granulator pitch shifting.unity
+    guid: 2409be0d6ff1846a88a342b138e271cb
+  - enabled: 1
+    path: Assets/VST/Assets/scenes/metering.unity
+    guid: 5e9c4ad8127e545eeb20f0f0d3367c01
+  - enabled: 1
+    path: Assets/VST/Assets/scenes/midisynthesizer.unity
+    guid: 22a2a998d86114ae6b981f28465905c1
+  - enabled: 1
+    path: Assets/VST/Assets/scenes/physics1.unity
+    guid: 46462d06d045c4532bed8b7e897ac687
+  - enabled: 1
+    path: Assets/VST/Assets/scenes/physics2.unity
+    guid: 6fb0abac91c434330a7fb00fdb551b8e
+  - enabled: 1
+    path: Assets/VST/Assets/scenes/pitch detection.unity
+    guid: b7b1a1853dffa427586bd50f9f7d8c03
+  - enabled: 1
+    path: Assets/VST/Assets/scenes/spatialization.unity
+    guid: 9e24aae60b55d2042b0b720dc4bc4a98
+  - enabled: 1
+    path: Assets/VST/Assets/scenes/speakerrouting.unity
+    guid: 97f67b13d7b0946faba1e4ce5b698fdf
+  - enabled: 1
+    path: Assets/VST/Assets/scenes/swords.unity
+    guid: 8ff4d32b57fb447dd9fa8c79702cca36
+  - enabled: 1
+    path: Assets/VST/Assets/scenes/synthesizers.unity
+    guid: 2b046d1e2db4543428bf0c084a39cdf6
+  - enabled: 1
+    path: Assets/VST/Assets/scenes/teleport.unity
+    guid: e97d6747d984d4b9d8f214467428327c
+  - enabled: 1
+    path: Assets/VST/Assets/scenes/velvetreverb.unity
+    guid: d676a7e5882449f469e749d85aa05051
+  - enabled: 1
+    path: Assets/VST/Assets/scenes/vocoder.unity
+    guid: c24a145f83d874453889755e16429ced
+  - enabled: 1
+    path: Assets/VST/Assets/scenes/voicefx.unity
+    guid: 8f70afe2f51cb457d81029efdb5eb9b4
+  - enabled: 1
+    path: Assets/VST/Assets/scenes/wahwah.unity
+    guid: ace5d441ba79c424ba62a5f4e1f66b4e
+  - enabled: 1
+    path: Assets/VST/Assets/scenes/weather.unity
+    guid: 171ffbe72fd594c43a9f5254bfdb0e20
   m_configObjects: {}

@@ -32937,8 +32937,9 @@ GameObject:
   - component: {fileID: 1711333802}
   - component: {fileID: 1711333801}
   - component: {fileID: 1711333804}
+  - component: {fileID: 1711333805}
   m_Layer: 0
-  m_Name: ChargeStation_5
+  m_Name: LevelExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33002,6 +33003,19 @@ MonoBehaviour:
   onInteract:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1711333805}
+        m_TargetAssemblyTypeName: Corp_Kaktus.Scripts.Trash.UnlockCursorComponent,
+          Assembly-CSharp
+        m_MethodName: UnlockCursor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1711333804}
         m_TargetAssemblyTypeName: Corp_Kaktus.Scripts.Utils.LoadSceneComponent, Utils
         m_MethodName: LoadScene
@@ -33029,6 +33043,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: MainMenu
+--- !u!114 &1711333805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711333799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b02e82b49dca4e5bac01c98451758156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1716097113
 PrefabInstance:
   m_ObjectHideFlags: 0
